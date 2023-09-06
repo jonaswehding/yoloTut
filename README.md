@@ -36,7 +36,7 @@ train: images/train  # train images (relative to 'path') 128 images
 val: images/val  # val images (relative to 'path') 128 images
 test:  # test images (optional)
 
-## Classes
+## Klasser
 names:
   0: apple
   1: cherry
