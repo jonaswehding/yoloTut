@@ -48,12 +48,16 @@ names:
   1: cherry
 
 
-
-
 ## Træning
 from ultralytics import YOLO
 
-### Load en model (giver bedre træning)
+eller
+
+Du kan træne din model i Google Colab (jupyter).
+Se i mappen Colab i denne git for at finde en ipynb fil der kan åbnes i google colab.
+Fordelen ved Google Colab er at du kan få adgang til en T4 Tesla GPU, så træning er meget hurtigere.
+
+### Load en pretrænet model (giver bedre træning)
 model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
 
 Du kan vælge mellem forskelllige størrelser af modeller. Jo større, jo bedre resultat, men det tager længere tid at træne og lave inference.
