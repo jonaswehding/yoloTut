@@ -4,11 +4,17 @@
 
 ## Indsamling og forberedelse af data
 
-Indsaml billeder og annoter dem.
-Rediger '.yaml' fil med de rigtige stier og klasseangivelser
-Brug labelimg til at annotere billeder
-kør labelimg i terminal i Pycharm
+Indsamle data/billeder og annoter dem i LABELIMG
+Lav et ny python project i Pycharm.
+Installer "ultralytics" python modul.
+I terminalen: kør labelimg
 
+Rediger '.yaml' fil med de rigtige stier og klasseangivelser
+    f.eks. mitDataset.yaml
+    Denne fil er en tekst fil der infdeholder information om hvor dine billeder og labels er på disken, og hvad klasserne hedder.
+    Train indeholder de data der skal trænes på. Images er billederne: eks. mitBillede1.jpg. labels er tekst filer med klasse nummer og koordinater på objekter der        skal genkendes.
+
+    
 ### Mappestruktur:
 ```
 Woking directory
@@ -31,7 +37,7 @@ Woking directory
 #2) file: path/to/imgs.txt, or 
 #3) list: [path/to/imgs1, path/to/imgs2, ..]
 
-path: ../datasets/mydataset  # dataset root dir
+path: ../datasets/mydataset  # dataset root dir. 
 train: images/train  # train images (relative to 'path') 128 images
 val: images/val  # val images (relative to 'path') 128 images
 test:  # test images (optional)
