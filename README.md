@@ -56,6 +56,14 @@ from ultralytics import YOLO
 ### Load en model (giver bedre træning)
 model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
 
+Du kan vælge mellem forskelllige størrelser af modeller. Jo større, jo bedre resultat, men det tager længere tid at træne og lave inference.
+Modellerne er: 
+yolov8n.pt - nano
+yolov8s.pt - small
+yoloy8m.pt - medium
+yolov8l.pt - large
+yolov8x.pt - extra large
+
 ### Træn modellen med GPU
 model.train(data='datasets/frugt.yaml', epochs=1000, imgsz=640, device=0)
 
