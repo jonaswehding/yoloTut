@@ -4,9 +4,10 @@
 
 ## Indsamling og forberedelse af data
 
-Indsamle data/billeder og annoter dem i LABELIMG
+Indsamle data/billeder og annoter dem i LABELIMG.
 Lav et ny python project i Pycharm.
-Installer "ultralytics" python modul.
+pip install "ultralytics" python modul.
+pip install "labelimg" python modul
 I terminalen: kør labelimg
 
 Rediger '.yaml' fil med de rigtige stier og klasseangivelser
