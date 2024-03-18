@@ -5,9 +5,9 @@
 ## Indsamling og forberedelse af data
 
 Indsamle data/billeder og annoter dem i LABELIMG.
-Lav et ny python project i Pycharm.
-pip install "ultralytics" python modul.
-pip install "labelimg" python modul
+Lav et ny python project i Pycharm eller et andet sted:)
+pip install "ultralytics" python modul til træning of inferens
+pip install "labelimgplus" python modul til labelling
 I terminalen: kør labelimg
 
 Rediger '.yaml' fil med de rigtige stier og klasseangivelser
@@ -20,26 +20,21 @@ Rediger '.yaml' fil med de rigtige stier og klasseangivelser
 ```
 Woking directory
     ├── datasets
-    |	   ├── train
-    |	   |     ├── images
-    |	   |     └── labels
-    |	   ├── test
-    |	   |     ├── images
-    |	   |     └── labels
-    |	   ├── valid
-    |	   |     ├── images
-    |	   |     └── labels
+    |	   ├── images
+    |	   |     ├── train
+    |	   |     └── val
+    |	   ├── labels
+    |	   |     ├── train
+    |	   |     └── val
+    |	   ├
+    |	   |     
+    |	   |     
     |	   └── data.yaml
     └── data.yaml
 ```
 ### YAML fil
-#Train/val/test sets as:
-#1) dir: path/to/imgs,
-#2) file: path/to/imgs.txt, or 
-#3) list: [path/to/imgs1, path/to/imgs2, ..]
-
 path: ../datasets/mydataset  # dataset root dir. 
-train: images/train  # train images (relative to 'path') 128 images
+train: train/train  # train images (relative to 'path') 128 images
 val: images/val  # val images (relative to 'path') 128 images
 test:  # test images (optional)
 
@@ -47,7 +42,6 @@ test:  # test images (optional)
 names:
   0: apple
   1: cherry
-
 
 ## Træning
 from ultralytics import YOLO
