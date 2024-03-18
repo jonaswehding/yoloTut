@@ -32,11 +32,12 @@ Woking directory
     └── data.yaml
 ```
 ### YAML fil
-#path: ../datasets/mydataset  # dataset root dir. 
-#train: train  # train images (relative to 'path') 128 images
-#val: val  # val images (relative to 'path') 128 images
-#test:  # test images (optional)
-
+```
+path: ../datasets/mydataset  # dataset root dir. 
+train: train  # train images (relative to 'path') 128 images
+val: val  # val images (relative to 'path') 128 images
+test:  # test images (optional)
+```
 ## Klasser
 names:
   0: apple
