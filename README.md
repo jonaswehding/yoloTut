@@ -20,12 +20,12 @@ Rediger '.yaml' fil med de rigtige stier og klasseangivelser
 ```
 Woking directory
     ├── datasets
-    |	   ├── images
-    |	   |     ├── train
-    |	   |     └── val
-    |	   ├── labels
-    |	   |     ├── train
-    |	   |     └── val
+    |	   ├── train
+    |	   |     ├── images
+    |	   |     └── labels
+    |	   ├── val
+    |	   |     ├── images
+    |	   |     └── labels
     |	   ├
     |	   |     
     |	   |     
