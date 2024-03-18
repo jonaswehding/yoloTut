@@ -1,5 +1,4 @@
 
-
 # Sådan træner du din drage
 
 ## Indsamling og forberedelse af data
@@ -34,8 +33,8 @@ Woking directory
 ```
 ### YAML fil
 path: ../datasets/mydataset  # dataset root dir. 
-train: train/train  # train images (relative to 'path') 128 images
-val: images/val  # val images (relative to 'path') 128 images
+train: train  # train images (relative to 'path') 128 images
+val: val  # val images (relative to 'path') 128 images
 test:  # test images (optional)
 
 ## Klasser
