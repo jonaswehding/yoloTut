@@ -1,7 +1,7 @@
 
 # Yolo - Træning
 
-## Indsamling og forberedelse af data
+## Indsamling og forberedelse af data til classificering
 
 Indsamle data/billeder og annoter dem i LABELIMG.
 Lav et ny python project i Pycharm eller et andet sted:)
