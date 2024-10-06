@@ -1,5 +1,5 @@
 
-# Sådan træner du din drage
+# Yolo - Træning
 
 ## Indsamling og forberedelse af data
 
