@@ -1,5 +1,5 @@
 
-# Yolo - Træning
+# YOLO - Træning
 
 ## Indsamling og forberedelse af data til objekt detektering
 
