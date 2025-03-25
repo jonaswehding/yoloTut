@@ -3,7 +3,7 @@
 
 ## Indsamling og forberedelse af data til objekt detektering
 
-Indsamle data/billeder og annoter dem i LABELIMG.
+Indsamle data/billeder og annoter dem i LABELIMG
 Lav et ny python project i Pycharm eller et andet sted:)
 pip install "ultralytics" python modul til træning of inferens
 pip install "labelimgplus" python modul til labelling
@@ -13,7 +13,6 @@ Rediger '.yaml' fil med de rigtige stier og klasseangivelser
     f.eks. mitDataset.yaml
     Denne fil er en tekst fil der infdeholder information om hvor dine billeder og labels er på disken, og hvad klasserne hedder.
     Train indeholder de data der skal trænes på. Images er billederne: eks. mitBillede1.jpg. labels er tekst filer med klasse nummer og koordinater på objekter der        skal genkendes.
-
     
 ### Mappestruktur:
 ```
@@ -23,12 +22,12 @@ Woking directory
     |	   |     ├── images
     |	   |     └── labels
     |	   ├── val
-    |	   |     ├── images
-    |	   |     └── labels
-    |	   ├
-    |	   |     
-    |	   |     
-    |	   └── data.yaml
+    |	         ├── images
+    |	         └── labels
+    |	   
+    |	        
+    |	        
+    |	   
     └── data.yaml
 ```
 ### YAML fil
@@ -52,19 +51,21 @@ Se i mappen Colab i denne git for at finde en ipynb fil der kan åbnes i google 
 Fordelen ved Google Colab er at du kan få adgang til en T4 Tesla GPU, så træning er meget hurtigere.
 
 ### Load en pretrænet model (giver bedre træning)
-model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
+model = YOLO('yolov11n.pt')  # load a pretrained model (recommended for training)
 
 Du kan vælge mellem forskelllige størrelser af modeller. Jo større, jo bedre resultat, men det tager længere tid at træne og lave inference.
 Modellerne er: 
-yolov8n.pt - nano
-yolov8s.pt - small
-yoloy8m.pt - medium
-yolov8l.pt - large
-yolov8x.pt - extra large
+yolov11n.pt - nano
+yolov11n.pt - small
+yoloy11m.pt - medium
+yolov11l.pt - large
+yolov11x.pt - extra large
 
 ### Træn modellen med GPU
 model.train(data='datasets/frugt.yaml', epochs=1000, imgsz=640, device=0)
 
+#evaluer model
+metrics = model.val()
 
 ## Inferens - test modellen
 from ultralytics import YOLO
