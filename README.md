@@ -3,7 +3,7 @@
 
 ## Indsamling og forberedelse af data til objekt detektering
 
-Indsamle data/billeder og annoter dem i Yolo Label Imager (ligger på Canvas)
+Indsamle data/billeder og annoter dem i Yolo Label Imager (GIT)
 Lav et ny python project i Pycharm eller VS Code eller et andet sted:)
 pip install "ultralytics" python modul til træning of inferens
 pip install "pillow" python modul. Skal bruges til Yolo Image Labeller
