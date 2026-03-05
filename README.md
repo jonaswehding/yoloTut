@@ -3,16 +3,12 @@
 
 ## Indsamling og forberedelse af data til objekt detektering
 
-Indsamle data/billeder og annoter dem i LABELIMG
-Lav et ny python project i Pycharm eller et andet sted:)
+Indsamle data/billeder og annoter dem i Yolo Label Imager (ligger på Canvas)
+Lav et ny python project i Pycharm eller VS Code eller et andet sted:)
 pip install "ultralytics" python modul til træning of inferens
-pip install "labelimgplus" python modul til labelling
-I terminalen: kør labelimg
+pip install "pillow" python modul. Skal bruges til Yolo Image Labeller
 
-Rediger '.yaml' fil med de rigtige stier og klasseangivelser
-    f.eks. mitDataset.yaml
-    Denne fil er en tekst fil der infdeholder information om hvor dine billeder og labels er på disken, og hvad klasserne hedder.
-    Train indeholder de data der skal trænes på. Images er billederne: eks. mitBillede1.jpg. labels er tekst filer med klasse nummer og koordinater på objekter der        skal genkendes.
+Annoter billeder med de rigtige klasser i Yolo Label Imager
     
 ### Mappestruktur:
 ```
@@ -30,7 +26,30 @@ Woking directory
     |	   
     └── data.yaml
 ```
-### YAML fil
+
+
+```
+Woking directory
+    ├── datasets
+    |	   ├── images
+    |	   |     ├── train
+    |	   |     └── val
+    |	   ├── labels
+    |	         ├── train
+    |	         └── val
+    |	   
+    |	        
+    |	        
+    |	   
+    └── data.yaml
+```
+
+Rediger '.yaml' fil med de rigtige stier og klasseangivelser
+    f.eks. mitDataset.yaml
+    Denne fil er en tekst fil der infdeholder information om hvor dine billeder og labels er på disken, og hvad klasserne hedder.
+    Train indeholder de data der skal trænes på. Images er billederne: eks. mitBillede1.jpg. labels er tekst filer med klasse nummer og koordinater på objekter der skal genkendes.
+
+### YAML fil eksempel
 ```
 path: ../datasets/mydataset  # dataset root dir. 
 train: train  # train images (relative to 'path') 128 images
@@ -50,8 +69,8 @@ Du kan træne din model i Google Colab (jupyter).
 Se i mappen Colab i denne git for at finde en ipynb fil der kan åbnes i google colab.
 Fordelen ved Google Colab er at du kan få adgang til en T4 Tesla GPU, så træning er meget hurtigere.
 
-### Load en pretrænet model (giver bedre træning)
-model = YOLO('yolov11n.pt')  # load a pretrained model (recommended for training)
+### Load en pretrænet yolyo 11 model (giver bedre træning)
+model = YOLO('yolov11n.pt')  
 
 Du kan vælge mellem forskelllige størrelser af modeller. Jo større, jo bedre resultat, men det tager længere tid at træne og lave inference.
 Modellerne er: 
