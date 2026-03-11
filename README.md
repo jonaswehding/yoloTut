@@ -79,7 +79,7 @@ yolov11l.pt - large
 yolov11x.pt - extra large
 
 ### Træn modellen  - 
-model.train(data='absolute path to yaml /datasets/frugt.yaml', epochs=1000, imgsz=640)
+model.train(data='absolute path to .yaml f.eks c:/yoloproject/datasets/frugt.yaml', epochs=1000, imgsz=640)
 
 #evaluer model
 metrics = model.val()
