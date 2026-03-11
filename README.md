@@ -80,8 +80,8 @@ yoloy11m.pt - medium
 yolov11l.pt - large
 yolov11x.pt - extra large
 
-### Træn modellen med GPU
-model.train(data='datasets/frugt.yaml', epochs=1000, imgsz=640, device=0)
+### Træn modellen
+model.train(data='datasets/frugt.yaml', epochs=1000, imgsz=640)
 
 #evaluer model
 metrics = model.val()
