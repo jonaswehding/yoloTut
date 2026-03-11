@@ -8,7 +8,10 @@ Lav et ny python project i Pycharm eller VS Code eller et andet sted:)
 pip install "ultralytics" python modul til træning of inferens
 pip install "pillow" python modul. Skal bruges til Yolo Image Labeller
 
-Annoter billeder med de rigtige klasser i Yolo Label Imager
+Når man forbereder data til træning, skal man have billeder og labels til både at træne, "train" og
+validere hvor godt modellen klarer opgave "val"
+En tommelfinger regel er 80/20 ,altså 80 procent af billederne skal i train mappen og 20% skal i val mappen.
+
     
 ### Mappestruktur:
 ```
@@ -80,7 +83,7 @@ yoloy11m.pt - medium
 yolov11l.pt - large
 yolov11x.pt - extra large
 
-### Træn modellen
+### Træn modellen  - 
 model.train(data='datasets/frugt.yaml', epochs=1000, imgsz=640)
 
 #evaluer model
@@ -89,8 +92,11 @@ metrics = model.val()
 ## Inferens - test modellen
 from ultralytics import YOLO
 
-model = YOLO(r'C:\Users\jweh\PycharmProjects\yolo_project\runs\detect\train\weights\best.pt') # load trained fruit model
-results = model('testimage2.jpg',show = True)
+#her loader i den model i har trænet, som ligger i weights. best.pt er den mode der har mindst loss (den bedste)
+model = YOLO(r'absolute path to project\runs\detect\train\weights\best.pt') # load trained fruit model
+
+#nu udfører du inferens på modellen, altså gir den et billede den aldrig har set før.
+results = model('path to test image/test.jpg',show = True)
 
 while True:
     pass
