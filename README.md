@@ -66,11 +66,6 @@ names: #klasser
 ## Træning
 from ultralytics import YOLO
 
-eller
-
-Du kan træne din model i Google Colab (jupyter).
-Se i mappen Colab i denne git for at finde en ipynb fil der kan åbnes i google colab.
-Fordelen ved Google Colab er at du kan få adgang til en T4 Tesla GPU, så træning er meget hurtigere.
 
 ### Load en pretrænet yolyo 11 model (giver bedre træning)
 model = YOLO('yolov11n.pt')  
@@ -84,7 +79,7 @@ yolov11l.pt - large
 yolov11x.pt - extra large
 
 ### Træn modellen  - 
-model.train(data='datasets/frugt.yaml', epochs=1000, imgsz=640)
+model.train(data='absolute path to yaml /datasets/frugt.yaml', epochs=1000, imgsz=640)
 
 #evaluer model
 metrics = model.val()
