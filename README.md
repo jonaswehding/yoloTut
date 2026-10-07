@@ -67,7 +67,7 @@ names: #klasser
 from ultralytics import YOLO
 
 
-### Load en pretrænet yolyo 11 model (giver bedre træning)
+### Load en pretrænet yolo 26 model (giver bedre træning)
 model = YOLO('yolo26n.pt')  
 
 Du kan vælge mellem forskelllige størrelser af modeller. Jo større, jo bedre resultat, men det tager længere tid at træne og lave inference.
